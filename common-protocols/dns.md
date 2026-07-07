@@ -3,7 +3,6 @@
 - **Authoritative Name Servers:** hold final authority for queries within designated zones, providing definitive responses. If they cannot respond, queries escalated to root servers
 # Enumeration 
 
-
 ```
 dig version.bind CHAOS TCT @DNS 
 
