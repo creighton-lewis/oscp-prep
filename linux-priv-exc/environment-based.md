@@ -69,6 +69,10 @@ irb(main:001:0> exec "/bin/sh"
 find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
 
 ```
+
+```
+find / -perm -u=s -type f 2>/dev/null
+```
 **setgid:** Permission that lets us run binaries as if we were part of the group that created them. files can be enumerated using following command 
 
 ```
