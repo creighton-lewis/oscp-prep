@@ -23,8 +23,14 @@ touch "--checkpoint-action=exec=sh shell.sh"
 
 [Resource 3](https://www.hacknos.com/rbash-escape-rbash-restricted-shell-escape/)
 
-Pager Commands
 
+```bash
+
+#Pager commands
+more file-name
+
+less file-name 
+```
 
 
 # Set UID/SUID Permissions 
