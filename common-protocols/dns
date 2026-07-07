@@ -1,5 +1,5 @@
 
-**Root Servers:** Manage highest level of DNS hierarchy and oversee top level domains globally, stepping in if lower level servers fail to respond 
+Root Servers: Manage highest level of DNS hierarchy and oversee top level domains globally, stepping in if lower level servers fail to respond 
 **Authoritative Name Servers:** hold final authority for queries within designated zones, providing definitive responses. If they cannot respond, queries escalated to root servers
 # Enumeration 
 
