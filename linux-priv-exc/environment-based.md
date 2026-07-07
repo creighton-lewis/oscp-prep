@@ -85,7 +85,7 @@ find / -uid 0 -perm -6000 -type f 2>/dev/null
 
 # Sudo Rights Abuse 
 
-```sudo --version ``
+```sudo --version ```
 ```sudo -l #shows what users can run with sudo privileges```
 ## Example 1 : No password needed
 ```
