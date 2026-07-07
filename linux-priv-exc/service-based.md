@@ -1,5 +1,6 @@
 # Linux Capabilities 
 - Capabilities granted to specific programs that may occassionally contain excessive privileges
+
 **Enumeration**
   
 ```
@@ -11,7 +12,15 @@ Linux Capabilities that can be abused:
 - cap_audit_control
 - cap_audit_write
 - cap_chown
+
 # Cron Jobs 
+## Enumeration 
+
+```
+crontab -l
+crontab -e
+-find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
+```
 # Containers 
 ## Docker 
 ## Polki 
