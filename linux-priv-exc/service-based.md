@@ -29,7 +29,13 @@ Practice
 id #helps us find out if we are part of docker group
 docker image ls #answers what docker images we have access to 
 ```
-## Polki 
+## Polkit
+
+````
+psexec -u <user> <command>  
+
+psexec -u root id
+```
 ## Kubernates 
 ## Logrotate 
 ## Misc 
