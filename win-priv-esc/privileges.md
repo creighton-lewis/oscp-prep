@@ -9,11 +9,14 @@ What it does: Lets you take ownership of certain files
 # SeImpersonatePrivilege
 What it does: Lets you impersonate system user 
 ## Common tools: 
-### Juicypotato
+### JuicypotatoNG
+
+```
+JuicyPotatoNG.exe -t * -p "C:\Windows\System32\cmd.exe" -a "/c whoami"
+``
 ### RogueWinRM
 ### Sweet Potato
 ### PrintSpoofer
-### JuicyPotatoNG
 # SeLoadDriverPrivilege
 
 # SeBackupPrivilege
