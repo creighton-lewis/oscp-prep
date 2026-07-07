@@ -2,7 +2,8 @@
 - Use BURPSuite to change the content-type submitted in request
 - Manipulating front end code 
 # Bypassing Blacklist Filters 
-[Php Wordlist](https://raw.githubusercontent.com/Noredo/Wordlist-file-upload-extension-bypass/refs/heads/main/php.wordlist) \n
+[Php Wordlist](https://raw.githubusercontent.com/Noredo/Wordlist-file-upload-extension-bypass/refs/heads/main/php.wordlist)
+
 [Web Extensions](https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/web-extensions.txt)
 
 - Replace the end of the image or file name with this in burpsuite 
