@@ -70,8 +70,12 @@ FindINterestingDomainAcl
 Get-DomainGroupMember
 
 ```
+```
 Get-DomainFileServer
+```
+```
 Get-DomainDFShare
+```
 
 ## Lateral Movement 
 ## Privilege Escalation 
