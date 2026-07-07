@@ -10,7 +10,8 @@ nc -vn X.X.X.X 22
 ssh htb-student@10.10.10.10
 ```
 ```
-sudo nmap -sV --script ssh* 
+sudo nmap -sV --script ssh*
+nuclei -u http://url -tags ssh 
 ```
 
 ```
