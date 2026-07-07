@@ -21,7 +21,7 @@ touch "--checkpoint-action=exec=sh shell.sh"
 
 [Resource 2](https://blog.pentesteracademy.com/breaking-out-of-a-restricted-shell-linux-privilege-escalation-3fb2700cb85e)
 
-[Resource 3] (https://www.hacknos.com/rbash-escape-rbash-restricted-shell-escape/)
+[Resource 3](https://www.hacknos.com/rbash-escape-rbash-restricted-shell-escape/)
 
 
 
