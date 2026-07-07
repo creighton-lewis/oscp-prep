@@ -29,6 +29,11 @@ less file-name
 ```
 
 
+```bash
+ed
+!'/bin/sh'
+```
+
 # Set UID/SUID Permissions 
 
 
