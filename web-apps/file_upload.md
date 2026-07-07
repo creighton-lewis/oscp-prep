@@ -7,8 +7,8 @@ https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Disc
 
 - Replace the end of the image or file name with this in burpsuite 
 
-   ```
-for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
+```
+   for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
     for ext in '.php' '.phps'; do
         echo "shell$char$ext.jpg" >> wordlist.txt
         echo "shell$ext$char.jpg" >> wordlist.txt
