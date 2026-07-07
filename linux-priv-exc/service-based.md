@@ -26,7 +26,8 @@ crontab -e
 Practice 
 [Vulnerable Container](https://github.com/haltacademy/Linux-Privilege-Escalation-Docker-Lab)
 ```
-id #helps us find out if we ware part of docker group 
+id #helps us find out if we are part of docker group
+docker image ls #answers what docker images we have access to 
 ```
 ## Polki 
 ## Kubernates 
