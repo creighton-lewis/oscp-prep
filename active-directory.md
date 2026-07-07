@@ -78,8 +78,12 @@ Get-DomainDFShare
 ```
 
 **GPO Enumeration**
+```
 Get-DomainGPO 
+```
+```
 Get-DomainPolicy 
+```
 **Computer Enumeration** 
 ```
 Get-NetLocalGroup 
