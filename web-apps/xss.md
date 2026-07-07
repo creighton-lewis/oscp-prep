@@ -19,14 +19,10 @@
 [XSS Payloads](https://github.com/justdsn/XSSPayloads/blob/main/cookie_based_xss_payloads.txt)
 
 [More XSS Payloads] https://github.com/justdsn/XSSPayloads
-https://swisskyrepo.github.io/PayloadsAllTheThings/XSS%20Injection/1%20-%20XSS%20Filter%20Bypass/#bypass-quotes-for-string
 
-```
-wget https://raw.githubusercontent.com/ScriptIdiot/XSS-wordlist/refs/heads/master/XSS-WAF.txt
-wget https://raw.githubusercontent.com/zapstiko/wordlists/965b4f46cc8c3a1e420e3564a571b49d5708a796/xss%20pyloads2
+[Swisskey Repo](https://swisskyrepo.github.io/PayloadsAllTheThings/XSS%20Injection/1%20-%20XSS%20Filter%20Bypass/#bypass-quotes-for-string)
 
 
-```
 
 # Types 
 
