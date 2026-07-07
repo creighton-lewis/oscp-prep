@@ -12,7 +12,7 @@
 6. **Escalate** — once XSS is confirmed, escalate from alert() to cookie theft, session hijacking, or CSRF
 
 # Resources 
-[Brandon Russel] (https://brandonrussell.io/OSCP-Notes/XXMore.html)
+[Brandon Russel](https://brandonrussell.io/OSCP-Notes/XXMore.html)
 
 [Burp Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 
