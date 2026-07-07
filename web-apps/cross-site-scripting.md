@@ -1,5 +1,5 @@
 
-Related: [[Cross Site Scripting - HTB]]
+
 
 # Practice 
 # Overview 
