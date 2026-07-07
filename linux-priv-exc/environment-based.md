@@ -34,6 +34,11 @@ ed
 !'/bin/sh'
 ```
 
+```python
+python -c 'import os; os.system("/bin/sh")'  
+python -c 'import pty; pty.spawn("/bin/bash")'
+```
+
 # Set UID/SUID Permissions 
 
 
