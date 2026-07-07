@@ -16,6 +16,8 @@
 ```
 sudo nmap -sV -sC -p111,2049 --script nfs*
 
+nuclei -u http://url -tags nfs 
+
 showmount -e [ip-address]
 ```
 
