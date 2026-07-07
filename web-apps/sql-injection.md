@@ -1,16 +1,29 @@
 Tool
 Connecting
+
+```
 mysql -u root -p
 
+```
+```
 mysql -u user -ppass
-
-mysql -u user -h remote.host.htb -P 3306 -p 
-
+```
+```
+mysql -u user -h remote.host.htb -P 3306 -p
+```
+```
 mysql -u user -h remote.host.htb -P 3306 -p --ssl=DISABLE
-Enumeration
-nuclei -u http://url -tag mysql 
+```
 
-sudo nmap -sV -sC 3306 
+# Enumeration
+
+```
+nuclei -u http://url -tag mysql
+```
+
+```
+sudo nmap -sV -sC 3306
+```
 External
 Table Manipulation
 
