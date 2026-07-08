@@ -2,6 +2,8 @@
 
 ### Kerberoasting Attack 
 Windows Device
+credentials: 
+mssqladm:DBAilfreight1!
 ```
 $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force #Create secure password 
 
