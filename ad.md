@@ -277,7 +277,7 @@ Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.M
 ```
 ### DSync 
 
-[!NOTE]  
+>[!NOTE]  
 >Must have control over account that has right to perform domain replication
 
 **Method 1**
@@ -295,7 +295,7 @@ Get-ObjectACL "DC=Domain-Controller,DC=local" ResolveGUIDs | ? { ($_.ObjectAceTy
 ```
 **Method 2**
 
-[!NOTE]  
+>[!NOTE]  
 >Must be ran in context of user with DCSync privileges
 
 ```
