@@ -9,10 +9,15 @@
 ### Where to look  
 
 [DomainTools](https://whois.domaintools.com/)
+
 [PTR-Arcive](https://www.whatsmydns.net/dns-lookup/ptr-records)
+
 [TruffleHog](https://github.com/trufflesecurity/truffleHog)
+
 [Linkedin2Username](https://github.com/initstring/linkedin2username)
+
 [DeHashed](https://dehashed.com/search#breachCheck)
+
 [HaveIBeenPwned](https://haveibeenpwned.com/)
 - Public Websites 
 - Google Dorking
