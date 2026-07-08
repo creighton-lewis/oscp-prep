@@ -55,6 +55,7 @@ Get-Domain
 
 ```
 Get-DomainController # returns list of domain controllers for specific domain 
+Get-ADDomainController # returns domain controller ip address, needed for GetUserSPN.py 
 ```
 
 
