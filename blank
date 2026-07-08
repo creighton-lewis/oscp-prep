@@ -1,0 +1,31 @@
+ftp 
+dns 
+imap 
+mssql 
+mysql 
+nfs 
+smb 
+smtp 
+linux-privilege-escalation 
+# Terminology 
+# Escalation Environments 
+# Commonly Used Tools 
+https://github.com/cdk-team/CDK
+- checklist 
+- run linpeas.sh 
+- run linux exploit suggester 
+- find out if gcc exists on the system 
+- determine what processes are running 
+- linux-exploit-suggester: guide to not getting excited by false positives 
+- containers 
+- environment 
+- systeminternals 
+linux-lateral-movement 
+linux-port-forwarding 
+linux-active-directory
+windows-priv-esc 
+windows-lateral-mvoement 
+windows-port-forwarding 
+windows-active-directory 
+idor-vulnerability
+xss-vulnerability 

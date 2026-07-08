@@ -45,6 +45,8 @@ ssh2john.py SSH.private > ssh.hash
 john --wordlist=rockyou.txt ssh.hash
 ```
 
+**Changing authentication method**
+
 # Exploitation 
 
 Brute forcing 
