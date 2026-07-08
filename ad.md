@@ -150,6 +150,7 @@ Find Computers where Domain Users are Local Admin
 ## Exploitation (from Linux)
 > [!NOTE]  
 > Requires domain user, cleartext password or hash, a shell in context of user or a shell in context of system. Must also know which host is domain controller so we can query it 
+
 **Kerberoasting**
 ```
 sudo python3 -m pip install .
