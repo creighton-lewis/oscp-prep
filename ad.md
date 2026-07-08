@@ -233,7 +233,7 @@ Set-DomainUserPassword -Identity target-user -AccountPassword $target-user-passw
 ```
 ### Adding Target User To Privileged Group
 
-[!NOTE]  
+>[!NOTE]  
 >What all is required to make this possible?
 >Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup
 
