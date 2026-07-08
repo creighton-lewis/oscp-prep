@@ -243,10 +243,12 @@ Set-DomainObject -Credential $Cred2 -Identity adunn -SET @{serviceprincipalname=
 Set-DomainObject -Credential $Cred2 -Identity adunn -Clear serviceprincipalname -Verbose
 ```
 2. Remove damundsen user for Help Desk 1 group 
- ``` Remove-DomainGroupMember -Identity "Help Desk Level 1" -Members 'damundsen' -Credential $Cred2 -Verbose
+ ```powershell
+ Remove-DomainGroupMember -Identity "Help Desk Level 1" -Members 'damundsen' -Credential $Cred2 -Verbose
+ 
  ```
 
 3. Confirm group removal 
 ```
-PS C:\htb> Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
+Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
 ```
