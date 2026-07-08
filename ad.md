@@ -26,7 +26,6 @@
 ```
 Import-Module ActiveDirectory 
 Get-Module
-
 ```
 
 ``` 
@@ -35,12 +34,10 @@ Get-ADDomain
 
 ```
 Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
-
 ```
 
 ```
 Get-ADTrust -Filter * 
-
 ```
 
 ```
@@ -50,7 +47,6 @@ Get-ADGroup -Filter * | select name
 
 ```
 Get-ADGroup -Identity "Backup Operators"
-
 ```
 ### Powerview
 
@@ -88,7 +84,6 @@ FindInterestingDomainAcl
 
 ```
 Get-DomainGroupMember
-
 ```
 ```
 Get-DomainFileServer
@@ -132,7 +127,6 @@ Get-DomainTrustMapping
 ```
 Test-AdminAccess -Computer ACADEMY-EA-MS01 
 Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName
-
 ```
 
 ### Sharpview 
