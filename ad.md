@@ -1,5 +1,10 @@
 # Active Directory 
 Related: 
+Terminology 
+- Active Directory
+- GPO
+- SID
+- GUID
 ## External Enumeration 
 ### What to look for 
 - IP space 
@@ -196,6 +201,11 @@ Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalnam
 GenericRight - all possible access rights 
 
 GenericWrite - full write access
+
+WriteDACL - Can grant yourself right to add members to a group, grant full control over a user, , computer, domain, or GPO 
+
+
+WriteDACL
 ```
 Find-InterestingDomainACL
 ```
@@ -265,3 +275,7 @@ Set-DomainObject -Credential $Cred2 -Identity adunn -Clear serviceprincipalname 
 ```
 Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
 ```
+### DSync 
+> [!NOTE]  
+>Must have control over account that has rights to perform domain replication 
+> Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup 
