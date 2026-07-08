@@ -201,8 +201,8 @@ Find-InterestingDomainACL
 
 
 ### Changing User Password Based on ACL Information 
-[!NOTE]  
-> Must authenticate as the user who is able to force change user passwords
+> [!NOTE]  
+> Must authenticate as user who can force change passwords
 1. Creates PSCredential Object
 ``` 
 $SecPassword = ConvertTo-SecureString '<PASSWORD HERE>' -AsPlainText -Force
