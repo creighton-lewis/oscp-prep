@@ -361,4 +361,16 @@ Get-DomainUser -PreauthNotRequired | select samaccountname,userprincipalname,use
 GetNPUsers.py INLANEFREIGHT.LOCAL/ -dc-ip 172.16.5.5 -no-pass -usersfile valid_ad_users
 ```
 
+**GPO Abuse**
+ Get-DomainGPO |select displayname
+ Get-GPO -All | Select DisplayName
+ ```
+ $sid=Convert-NameToSid "Group of Interest"
+ Get-DomainGPO | Get-ObjectAcl | ?{$_.SecurityIdentifier -eq $sid}
+```
+>[!NOTE]
+>ObjectDN = -Guid value
 
+```
+Get-GPO -Guid 7CA9C789-14CE-46E3-A722-83F4097AF532
+```
