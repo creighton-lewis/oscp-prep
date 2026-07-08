@@ -276,6 +276,12 @@ Set-DomainObject -Credential $Cred2 -Identity adunn -Clear serviceprincipalname 
 Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
 ```
 ### DSync 
-> [!NOTE]  
->Must have control over account that has rights to perform domain replication 
-> Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup 
+
+[!NOTE]  
+>Must have control over account that has right to perform domain replication
+
+**User Enumeration**
+```
+Get-DomainUser -Identity user-of-interest  |select samaccountname,objectsid,memberof,useraccountcontrol |fl
+```
+
