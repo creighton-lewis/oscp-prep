@@ -346,6 +346,7 @@ Restart-Service WinRM
 ```
   Get-DomainUser * | Select-Object samaccountname,description |Where-Object {$_.Description -ne $null}
 ```
+**Password Not Required**
 
 ```
   Get-DomainUser -UACFilter PASSWD_NOTREQD | Select-Object samaccountname,useraccountcontrol
