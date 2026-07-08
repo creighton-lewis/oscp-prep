@@ -338,8 +338,10 @@ Restart-Service WinRM
 **Exchange Related Group Organization Management** 
 - Vectors for privilege escalation
 **Printer Bug**
+  ```
   Import-Module .\SecurityAssessment.ps1
   Get-SpoolStatus -ComputerName ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL
+  ```
 **Password Locateed in Description**
 ```
   Get-DomainUser * | Select-Object samaccountname,description |Where-Object {$_.Description -ne $null}
