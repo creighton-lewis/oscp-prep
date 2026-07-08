@@ -340,4 +340,12 @@ Restart-Service WinRM
 **Printer Bug**
   Import-Module .\SecurityAssessment.ps1
   Get-SpoolStatus -ComputerName ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL
+**Password Locateed in Description**
+```
+  Get-DomainUser * | Select-Object samaccountname,description |Where-Object {$_.Description -ne $null}
+```
+
+```
+  Get-DomainUser -UACFilter PASSWD_NOTREQD | Select-Object samaccountname,useraccountcontrol
+```
 
