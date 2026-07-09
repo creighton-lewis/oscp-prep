@@ -446,7 +446,8 @@ PRODUCTS
 **2.SID for child domain**
 
 ```
-Get-DomainSID #run from within/from the child domain 
+Get-DomainSID #run from within/from the child domain
+Convert-NameToSid target.domain.com\krbtgt
 ```
 
 3. TARGET USER
