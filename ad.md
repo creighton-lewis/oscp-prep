@@ -30,7 +30,11 @@ Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/blob/main/w
 - Google Dorking
 ## Password Spraying 
 **Linux** 
+```
+```
 **Windows**
+```
+```
 ## Internal Enumeration 
 
 ```
