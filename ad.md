@@ -385,3 +385,20 @@ GetNPUsers.py INLANEFREIGHT.LOCAL/ -dc-ip 172.16.5.5 -no-pass -usersfile valid_a
 Get-GPO -Guid 7CA9C789-14CE-46E3-A722-83F4097AF532
 ```
 - Bloodhound used for even more enumeration
+
+## Domain Trusts 
+Trust: Used to establish forest-forest or domain-domain authentication; lets users access resources
+- Transitive: Loose trust configuration
+- Non-Transitive: Strict, direct trust configuration
+- Can be enumerated with PowerView Get-DomainTrust function and Bloodhound
+**Trust Enumeration**
+
+  ```
+  Get-DomainTrustMapping
+  ```
+
+  ```
+netdom query /domain:inlanefreight.local trust
+Direction Trusted\Trusting domain  
+```
+  
