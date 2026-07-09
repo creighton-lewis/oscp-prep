@@ -393,12 +393,16 @@ Trust: Used to establish forest-forest or domain-domain authentication; lets use
 - Can be enumerated with PowerView Get-DomainTrust function and Bloodhound
 **Trust Enumeration**
 
-  ```
+```
   Get-DomainTrustMapping
-  ```
+```
 
-  ```
+```
 netdom query /domain:inlanefreight.local trust
+netdom query /domain:inlanefreight.local dc
+netdom query /domain:inlanefreight.local workstation
+
+
 Direction Trusted\Trusting domain  
 ```
   
