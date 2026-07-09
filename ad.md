@@ -423,10 +423,14 @@ sidHistory: attribute used in migration scenarios if a user in one domain is mig
 
 extraSIDS attack: lets user add an admin account to the SID history attribute of an account they can control 
 >[!NOTE]
->KRBTGT hash for child domain
+> KRBTGT hash for child domain
+>
 >SID for child domain
+>
 >Name of target user (can be fake) 
+>
 >FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
+>
 >SID of Enterprise Admins group of root domain
 
 ### **Mimikatz** 
