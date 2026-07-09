@@ -285,6 +285,13 @@ Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.M
 ```
 Get-DomainUser -Identity user-of-interest  |select samaccountname,objectsid,memberof,useraccountcontrol |fl
 ```
+result 
+
+```
+samaccountname     : adunn
+objectsid          : S-1-5-21-3842939050-3880317879-2865463114-1164
+memberof           : {CN=VPN Users,OU=Security Groups,OU=Corp,DC=INLANEFREIGHT,DC=LOCAL, CN=Shared Calendar
+```
 ```
 $sid = "sid" 
 ```
