@@ -36,7 +36,9 @@ Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/blob/main/w
 ```
 ```
 ## Internal Enumeration 
-
+```
+Get-LocalUser -Name "UserName" | Select-Object Name, PasswordRequired, PasswordLastSet
+```
 ```
 Import-Module ActiveDirectory 
 Get-Module
