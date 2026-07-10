@@ -73,5 +73,15 @@ xfreerdp /v:192.168.220.152 /u:lewen \
 - Check to make sure it is enabled
 ```
 Get-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections"
+```
 
+```
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" -Value 0
+```
+
+```
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+```
+```
+Get-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" #output should be zero if successful
 ```
