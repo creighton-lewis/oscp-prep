@@ -567,7 +567,7 @@ git clone https://github.com/haseebT/mRemoteNG-Decrypt
 python3 mremoteng_decrypt.py -s {encrypted-pass}
 ```
 
-**Situation Two **
+**Situation Two**
 - Encrypted configuration file 
 - Custom password 
 	- Must either crack the protected attribute or the password itself 
