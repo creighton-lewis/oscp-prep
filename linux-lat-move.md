@@ -1,3 +1,4 @@
+```
 Compromised host — where to move next?
 │
 ├── SSH credentials available?
@@ -32,3 +33,4 @@ Compromised host — where to move next?
     ├── Passive credential sniffing (if cap_net_raw)
     ├── Wait for admin SSH → agent hijack (§1.3)
     └── Check for cloud metadata (169.254.169.254)
+```
