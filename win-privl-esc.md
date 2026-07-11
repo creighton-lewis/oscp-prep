@@ -332,14 +332,14 @@ cmd /c copy /Y SecurityService.exe "C:\Program Files (x86)\PCProtect\SecuritySer
 
 ```
 
-### Kernel Vulnerabilities
+#### Kernel Vulnerabilities
 [Kernel Vulnerability Resource Database](https://msrc.microsoft.com/update-guide/vulnerability)
 
 > [!note]
 > Takeaway 
 > -When completing activities, try all the files that exist in a directory, regardless of whether you think they will help you find the flag or not 
 
-### DLL Injection
+#### DLL Injection
 - Tricking Windows machines to load a malicious file by making it look for files in the wrong order
 - **How To Find Missing DLL**
 ```cmd
@@ -704,48 +704,4 @@ Get-Disk | Select-Object FriendlyName, Location, Path
 
 1. Open disk management 
 2. Right click on file and choose mount 
-
-# Windows Server
-Metasploit Exploitation Walkthrough 
-
-Set-ExecutionPolicy bypass -Scope process
-1. run wmic wfe to check for missing ==KBS==
-2. bypass execution policy
-3. Download sherlock
-4. Import-Module .\Sherlock.ps1
-5. Find-AllVulns
-
-```
-Set-ExecutionPolicy bypass -Scope process
-```
-
-```
-Import-Module .\Sherlock.ps1
-Sherlock
-
-```
-
-```
-git clone https://raw.githubusercontent.com/rasta-mouse/Sherlock/refs/heads/master/Sherlock.ps1
-
-sudo python3 -m http.server --bind 0.0.0.0
-
-```
-
-
-```
-netsh.exe interface portproxy add v4tov4 listenport=8080 listenaddress=10.129.42.1298 connectport=3389 connectaddress=172.16.5.19
-```
-
-
-
-
-```prompt:kali hlt:whoami
-cd /opt
-whoami
-hostname
-uname -a
-ls 
-
-```
 
