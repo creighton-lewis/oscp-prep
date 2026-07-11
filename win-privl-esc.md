@@ -164,18 +164,7 @@ Add-DnsServerResourceRecordA -Name wpad -ZoneName inlanefreight.local -ComputerN
 - if domain controllers have been virtualized, then virtualization admins should be considered domain admins 
 - deleting virtual machine attempts to restore original file permissions on corresponding .vhdx file 
 #### Print Operators
-- Grants SeLoadDriverPrivilege, which is ability to to administer/connect/disconnect printers as well as login to domain controller
 
-
-
-> [!NOTE]
-> 1. Download tool to enable privilege (https://raw.githubusercontent.com/3gstudent/Homework-of-C-Language/master/EnableSeLoadDriverPrivilege.cpp)
-> 2. Compile privilege using cl.exe from visual studio 
-> 3. Downloadcapcom.sys file  to ``C:\temp``
-> 4. Add reference to drive 
-> 5. Check to make sure capcom driver is not loaded
-> 6. Check it has been enabled 
-> 7. Launch exploit using exploitcapcom.exe
 
 ####  Server Operators 
 - Grants SeBackupPrivilege and SeRestorePrivilege 
