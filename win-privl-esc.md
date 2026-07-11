@@ -35,6 +35,7 @@ GodPotato -cmd "cmd /c whoami"
 ##### PrintSpoofer
 >[!NOTE]
 >What software or operating systems or windows versions does printspoofer work?
+>From LOCAL/NETWORK SERVICE to SYSTEM by abusing SeImpersonatePrivilege on Windows 10 and Server 2016/2019.
 
 ```
 .\PrintSpoofer.exe -i -c cmd
