@@ -37,4 +37,6 @@
 
 [File Upload](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/file_upload.md)
 
+[XSS Cross Scripting](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/xss.md)
+
 
