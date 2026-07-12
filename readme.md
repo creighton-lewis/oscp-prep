@@ -31,7 +31,7 @@
 
 [Active Directory](https://github.com/creighton-lewis/oscp-prep/blob/main/ad.md)
 
-# Web Application
+# Web Vulnerabilities 
 
 [File-Inclusion](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/file_inclusion.md)
 
@@ -40,5 +40,13 @@
 [XSS Cross Scripting](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/xss.md)
 
 [IDOR](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/idor.md)
+
+# Applications
+
+Wordpress 
+
+Jenkins 
+
+Joomla
 
 
