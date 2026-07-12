@@ -9,6 +9,6 @@
 
 [Windows Privilege Escalation](https://raw.githubusercontent.com/creighton-lewis/oscp-prep/refs/heads/main/win-privl-esc.md)
 
-[Windows Tunneling]
+[Windows Tunneling](https://github.com/creighton-lewis/oscp-prep/blob/main/windows-tunneling.md)
 
 
