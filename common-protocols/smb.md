@@ -3,8 +3,7 @@ Related: [[SMB]] | [[smbmap]] |
 
 *Server Creation*
 
-> [!Attention] Must make the directory before you can use it 
-> 
+
 
 ```bash 
 mkdir share 
@@ -102,5 +101,4 @@ session -i 1
 shell
 ```
 
-![[Alternative Vault/01. Methodologies/B. Web Application/File Inclusion#SMB]]
 # Post Exploitation 
