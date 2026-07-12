@@ -39,4 +39,6 @@
 
 [XSS Cross Scripting](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/xss.md)
 
+[IDOR]
+
 
