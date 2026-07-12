@@ -95,5 +95,8 @@ Data types from each column MUST be the same, and the number of columns in each 
 
 - Use the function ORDER BY until there is an error that says a column does not exist
 
-2. Determine injection 
+2. Determine injection location
 
+#### Data Extraction
+```
+```
